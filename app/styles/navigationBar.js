@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     marginLeft:10,
   },
   bugfixed:{
-
     width:Dimensions.get('window').width-138,
     flex:1,
     flexDirection:'row',
@@ -48,6 +47,7 @@ const styles = StyleSheet.create({
   },
   textInput:{
     flex:1,
+    padding:1,
     marginLeft:8,
   },
   inputIcon:{
