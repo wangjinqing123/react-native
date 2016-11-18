@@ -49,4 +49,12 @@ node_modules/
 .flowconfig/
 .watchmanconfig/
 package.json/
+<<<<<<< HEAD
+<<<<<<< HEAD
 yarn.lock/
+=======
+yarn.lock/
+>>>>>>> 44fb890045c93449fa940047a0de898949236160
+=======
+yarn.lock/
+>>>>>>> 24b7928cf67fc17b175164e009fdc5e69666ea64

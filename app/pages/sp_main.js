@@ -13,6 +13,13 @@ import jingxuan from '../component_common/jingxuan';
 import NavigationBarRouteMapper from '../component_common/navigationBar_one';
 
 export default class One extends Component{
+  constructor(props){
+    super(props);
+    this.url = '';
+  }
+  fetchData(url){
+
+  }
    /**
    * 配置场景动画
    * @param route 路由
