@@ -35,7 +35,7 @@ export default class CusSwitch extends Component{
           index ==0 ? styles.left : styles.right]}
         >
           <TouchableHighlight
-            underlayColor ="#c33"
+            underlayColor ="rgb(130, 98, 98)"
             onPress={()=>this.switchChange(index)}
           >
             <View style={styles.textItemBox}>

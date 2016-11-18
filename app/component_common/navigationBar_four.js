@@ -13,6 +13,9 @@ import Back from './back';
 import MinePage from '../pages/innerPages/mine';
 import HeiMingDan from '../pages/innerPages/heimingdan';
 
+//顶部导航图标
+import icons from './Icons';
+
 let pages = [
   {name:'MinePage',component:MinePage},
   {name:'HeiMingDan',component:HeiMingDan}
@@ -25,14 +28,14 @@ var NavigationBar = {
     if(route.name == "Four"){
       return (
         <View style={styles.leftButton}>
-          <Route text="user" navigator={navigator} page={pages[0]}></Route>
+          <Route text={icons.user} navigator={navigator} page={pages[0]}></Route>
         </View>
       );
     }
     if (index > 0) {
       return (
         <View style={styles.leftButton}>
-          <Back index={index} navigator={navigator}></Back>
+          <Back text={icons.back} index={index} navigator={navigator}></Back>
         </View>
       );
     } else {
@@ -45,14 +48,14 @@ var NavigationBar = {
     if(route.name == "Four"){
       return (
         <View style={styles.rightButton}>
-          <Route text="黑名单" navigator={navigator} page={pages[1]}></Route>
+          <Route text={icons.hmd} navigator={navigator} page={pages[1]}></Route>
         </View>
       );
     }
     if(route.name == 'MinePage'){
         return (
           <View style={styles.rightButton}>
-            <Route text="设置" page={pages[1]} navigator={navigator}></Route>
+            <Route text={icons.set} page={pages[1]} navigator={navigator}></Route>
           </View>
         );
     }

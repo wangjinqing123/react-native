@@ -13,6 +13,9 @@ import EditPage from '../pages/innerPages/edit';
 import Route from './route';
 import Back from './back';
 
+//顶部导航图标
+import icons from './Icons';
+
 let pages = [
   {name:'MinePage',component:MinePage},
   {name:'EditPage',component:EditPage}
@@ -26,14 +29,14 @@ var NavigationBar = {
 
       return (
         <View style={styles.leftButton}>
-          <Route text="user" navigator={navigator} page={pages[0]}></Route>
+          <Route text={icons.user} navigator={navigator} page={pages[0]}></Route>
         </View>
       );
     }
     if (index > 0) {
       return (
         <View style={styles.leftButton}>
-          <Back index={index} navigator={navigator}></Back>
+          <Back text={icons.back} index={index} navigator={navigator}></Back>
         </View>
       );
     } else {
@@ -46,14 +49,14 @@ var NavigationBar = {
     if(route.name == "Three"){
       return (
         <View style={styles.rightButton}>
-          <Route text="write" navigator={navigator} page={pages[1]}></Route>
+          <Route text={icons.write} navigator={navigator} page={pages[1]}></Route>
         </View>
       );
     }
     if(route.name == 'MinePage'){
       return (
         <View style={styles.rightButton}>
-          <Route text="设置" page={pages[1]} navigator={navigator}></Route>
+          <Route text={icons.set} page={pages[1]} navigator={navigator}></Route>
         </View>
       );
     }
