@@ -14,13 +14,13 @@ import styles from './styles/main';
 
 //引入四个页面
 //首页
-import One from './pages/one';
+import sp_main from './pages/sp_main';
 //发现
-import Two from './pages/two';
+import sp_find from './pages/sp_find';
 //新鲜
-import Three from './pages/three';
+import sp_new from './pages/sp_new';
 //消息
-import Four from './pages/four';
+import sp_message from './pages/sp_message';
 
 let tabBars = [
   {
@@ -70,10 +70,10 @@ export default class Index extends Component {
   render(){
     //
     const routes = [
-      {name: 'One', component: One},
-      {name: 'Two', component: Two},
-      {name: 'Three', component: Three},
-      {name: 'Four', component: Four},
+      {name: 'One', component: sp_main},
+      {name: 'Two', component: sp_find},
+      {name: 'Three', component: sp_new},
+      {name: 'Four', component: sp_message},
     ];
     let tabBarList = tabBars.map((item, index) => {
       return (

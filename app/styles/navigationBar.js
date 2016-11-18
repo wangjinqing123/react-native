@@ -1,5 +1,6 @@
 import {
-  StyleSheet
+  StyleSheet,
+  Dimensions
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -16,6 +17,7 @@ const styles = StyleSheet.create({
     marginLeft:10,
   },
   bugfixed:{
+    width:Dimensions.get("window").width - 136,
     flex:1,
     justifyContent:'center',
     alignItems:'center',
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
     paddingTop:8,
-    paddingBottom:8,
+    paddingBottom:8
   },
   inputBox:{
     marginTop:8,
