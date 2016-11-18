@@ -82,14 +82,14 @@ export default StyleSheet.create({
     tintColor: 'rgba(255, 255, 255, 0.3)',
   },
   tabBarLight: {
-    fontSize: 12,
-    color:'#1296db',
+    fontSize: 10,
+    color:'#886565',
     position:'relative',
     top:-3,
   },
   tabBarDark: {
-    fontSize: 12,
-    color:'#222',
+    fontSize: 10,
+    color:'#bfbfbf',
     position:'relative',
     top:-3,
   },
@@ -102,6 +102,6 @@ export default StyleSheet.create({
   nav:{
     borderBottomWidth:1,
     borderColor:'#ddd',
-    backgroundColor:'#fff'
+    backgroundColor:'#d5d5d5',
   }
 });

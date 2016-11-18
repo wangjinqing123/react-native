@@ -21,6 +21,8 @@ import MinePage from '../pages/innerPages/mine';
 import SettingPage from '../pages/innerPages/setting';
 //编辑页面
 import EditPage from '../pages/innerPages/edit';
+//顶部导航图标
+import icons from './Icons';
 
 //路由
 let routes = [
@@ -53,14 +55,14 @@ var NavigationBar = {
     if(route.name == "One"){
       return (
         <View style={styles.leftButton}>
-          <Route text='user' page={pages[0]} navigator={navigator}></Route>
+          <Route text={icons.user} page={pages[0]} navigator={navigator}></Route>
         </View>
       );
     }
     if (index > 0) {
       return (
         <View style={styles.leftButton}>
-          <Back index={index} navigator={navigator}></Back>
+          <Back text={icons.back} index={index} navigator={navigator}></Back>
         </View>
       );
     } else {
@@ -73,14 +75,14 @@ var NavigationBar = {
     if(route.name == "One"){
       return (
         <View style={styles.rightButton}>
-          <Route text="write" page={pages[2]} navigator={navigator}></Route>
+          <Route text={icons.write} page={pages[2]} navigator={navigator}></Route>
         </View>
       );
     }
     if(route.name == 'MinePage'){
         return (
           <View style={styles.rightButton}>
-            <Route text="设置" page={pages[1]} navigator={navigator}></Route>
+            <Route text={icons.set} page={pages[1]} navigator={navigator}></Route>
           </View>
         );
     }

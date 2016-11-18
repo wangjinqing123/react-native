@@ -1,5 +1,6 @@
 import {
-  StyleSheet
+  StyleSheet,
+  Dimensions
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -16,26 +17,27 @@ const styles = StyleSheet.create({
     marginLeft:10,
   },
   bugfixed:{
+    width:Dimensions.get('window').width-138,
     flex:1,
+    flexDirection:'row',
     justifyContent:'center',
     alignItems:'center',
-    flexDirection:'row',
   },
   title:{
     flex:1,
     justifyContent:'center',
     alignItems:'center',
     paddingTop:8,
-    paddingBottom:8,
+    paddingBottom:8
   },
   inputBox:{
-    marginTop:8,
-    marginBottom:8,
-    backgroundColor:'#dfdfdf',
-    flex:1,
+    width:Dimensions.get('window').width-138,
+    height:30,
+    borderRadius:6,
+    backgroundColor:'#fff',
     flexDirection:'row',
     marginLeft:60,
-    marginRight:10
+    marginRight:10,
   },
   inputCon:{
     flex:1,

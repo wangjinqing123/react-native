@@ -87,7 +87,7 @@ export default class Index extends Component {
 
             }} key={index}>
             <View style={styles.tabBarThumb}>
-              <Image
+              <Image style={{width:26,height:26,marginBottom:2}}
                 source={
                   tabBars[index][this.state.tabIndex === index ? "imgSrcLight":"imgSrcDark"]
                 }
