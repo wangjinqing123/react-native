@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
     paddingBottom:8
   },
   inputBox:{
-    width:Dimensions.get('window').width-138,
+    width:Dimensions.get('window').width-90,
     height:30,
     borderRadius:6,
     backgroundColor:'#fff',
     flexDirection:'row',
     marginLeft:60,
-    marginRight:10,
+    marginRight:10
   },
   inputCon:{
     flex:1,
@@ -47,6 +47,9 @@ const styles = StyleSheet.create({
   },
   textInput:{
     flex:1,
+    height:30,
+    padding:1,
+    lineHeight:18,
     marginLeft:8,
   },
   inputIcon:{
