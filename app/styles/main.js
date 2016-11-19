@@ -53,6 +53,7 @@ export default StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor:'#fff'
   },
   movieListContainer: {
     flex: 1,
@@ -62,7 +63,8 @@ export default StyleSheet.create({
   tabBar: {
     height: 44,
     borderTopWidth:1,
-    borderTopColor:'#ddd',
+    borderTopColor:'#f1f1f1',
+    backgroundColor:'#f6f6f6',
   },
   tabBarBox: {
     flex: 1,
