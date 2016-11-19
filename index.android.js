@@ -37,7 +37,7 @@ export default class app extends Component {
   render(){
     return (
       <Navigator
-        initialRoute = {routes[1]}
+        initialRoute = {routes[0]}
         renderScene = {this.renderScene}
 
       />
