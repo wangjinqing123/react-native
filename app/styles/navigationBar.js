@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor:'#fff',
     flexDirection:'row',
     marginLeft:60,
-    marginRight:10,
+    marginRight:10
   },
   inputCon:{
     flex:1,
