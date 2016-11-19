@@ -17,6 +17,8 @@ class take extends React.Component {
   }
   render() {
     return (
+        <View style={{backgroundColor:'#fff',}}>
+
             <View style={styles.take_box}>
                 <View style={styles.take_img_box}>
                     <Image style={styles.take_img} source={{uri:this.props.information.take_img}}/>
@@ -40,6 +42,8 @@ class take extends React.Component {
                     </TouchableHighlight>
                 </View>
             </View>
+
+      </View>
     )
   }
 }

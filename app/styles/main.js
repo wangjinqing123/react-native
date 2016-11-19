@@ -53,7 +53,7 @@ export default StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor:'#fff'
+    backgroundColor:'rgb(233, 233, 233)'
   },
   movieListContainer: {
     flex: 1,
