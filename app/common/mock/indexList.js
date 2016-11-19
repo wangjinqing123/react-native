@@ -1,4 +1,4 @@
-let information = [
+module.exports = [
     {
         user_id: 1,
         user_text: '斐波那契在养兔子O(∩_∩)O哈哈~',
@@ -46,6 +46,4 @@ let information = [
             }
         ]
     }
-];
-
-export default information;
+]

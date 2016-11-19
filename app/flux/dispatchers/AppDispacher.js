@@ -1,5 +1,5 @@
-// import { Dispatcher } from 'flux';
-// import ListStore from '../stores/ListStore.js';
+import { Dispatcher } from 'flux';
+import Store from '../stores/Store.js';
 //
 // let AppDispatcher = new Dispatcher();
 //

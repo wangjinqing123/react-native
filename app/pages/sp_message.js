@@ -8,7 +8,7 @@ import {
 
 
 import styles from '../styles/main';
-import xiaoxi from '../component_common/xiaoxi';
+import xiaoxi from '../component_common/message_content/xiaoxi';
 
 
 import NavigationBarRouteMapper from '../component_common/navigationBar_four';

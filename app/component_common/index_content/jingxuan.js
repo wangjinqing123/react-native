@@ -4,64 +4,82 @@ import {
   Text,
   Image,
   StyleSheet,
-  ScrollView
+  ScrollView,
+  ActivityIndicator,
+  ListView
 } from 'react-native';
 
 import ListItem from '../info';
-import information from '../../common/test';
+
+import URL from '../../common/url';
 
 export default class JokerList extends Component{
   constructor(props){
     super(props);
+
+    this.fetchData();
+
     this.state = {
-        isclick: false,
-        click: {
-            good: false,
-            bad: false
-        },
+      isLoading:false,
+      indexList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     }
   }
-  Click(user_id,info) {
-      if (!this.state.isclick) {
-          if (info == "good") {
-              this.setState({
-                  isclick: true,
-                  click: {
-                      good: true
-                  }
-              });
-          } else if (info == "cai") {
-              console.log(info);
-              this.setState({
-                  isclick: true,
-                  click: {
-                      bad: true
-                  }
-              });
-          }
-      }
+  fetchData(){
+    fetch(URL.indexListURL)
+      .then(response => response.json())
+      .then(responseData => {
+
+        this.setState({
+          indexList:this.state.indexList.cloneWithRows(responseData),
+          isLoading:true
+        });
+
+      })
+      .done();
+  }
+
+  renderIndexList(item){
+    console.log(item);
+    return (
+        <View>
+          <ListItem information={item}/>
+        </View>
+    )
   }
   render(){
-    var infoList = information.map((item, index) => {
-        return (
-            <View key={index}>
-              <ListItem click={this.Click.bind(this)} isclick={this.state.click} information={item}/>
-            </View>
-        )
-    })
-    return (
-      <ScrollView>
-        <View style={styles.container}>
-          {infoList}
+    if(!this.state.isLoading){
+      return (
+        <View style={{
+          backgroundColor: '#eae7ff',
+          flex: 1
+        }}
+        >
+          <View style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <ActivityIndicator
+              size="large"
+            />
+          </View>
         </View>
-      </ScrollView>
-    );
+      )
+    }else{
+      return (
+        <View style={styles.container}>
+          <ScrollView>
+            <ListView
+              dataSource={this.state.indexList}
+              renderRow={this.renderIndexList}
+            >
+            </ListView>
+          </ScrollView>
+        </View>
+      );
+    }
   }
 }
-
-
-
-
 
 const styles = StyleSheet.create({
   container:{

@@ -1,4 +1,4 @@
-// import { EventEmitter } from 'events';
+import { EventEmitter } from 'events';
 
 //es6 对象的merge
 // export default Object.assign({},EventEmitter.prototype , {

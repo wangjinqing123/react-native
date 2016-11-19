@@ -1,4 +1,4 @@
-// import AppDispatcher from '../dispatchers/AppDispacher.js';
+import AppDispatcher from '../dispatchers/AppDispacher.js';
 //
 // export default {
   // addNewItem(text){
