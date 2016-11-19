@@ -4,11 +4,13 @@ import {
   Text,
   Image,
   StyleSheet,
-  ScrollView
+  ScrollView,
+  TouchableHighlight
 } from 'react-native';
 
 import ListItem from '../info';
 import information from '../../common/test';
+import DetailPage from '../../pages/innerPages/Detail';
 
 export default class JokerList extends Component{
   constructor(props){
@@ -41,11 +43,15 @@ export default class JokerList extends Component{
           }
       }
   }
+  GotoDetail(){
+    <Route text={icons.user} page={pages[0]} navigator={navigator}></Route>
+  }
   render(){
     var infoList = information.map((item, index) => {
         return (
+//  {name:'DetailPage',component:DetailPage}
             <View key={index}>
-              <ListItem click={this.Click.bind(this)} isclick={this.state.click} information={item}/>
+              <ListItem  click={this.Click.bind(this)} isclick={this.state.click} information={item}/>
             </View>
         )
     })

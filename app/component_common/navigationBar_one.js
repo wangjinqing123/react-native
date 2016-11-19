@@ -21,8 +21,11 @@ import MinePage from '../pages/innerPages/mine';
 import SettingPage from '../pages/innerPages/setting';
 //编辑页面
 import EditPage from '../pages/innerPages/edit';
+//详情页面
+import DetailPage from '../pages/innerPages/Detail';
 //顶部导航图标
 import icons from './Icons';
+
 
 //路由
 let routes = [
@@ -33,7 +36,8 @@ let routes = [
 let pages = [
   {name:'MinePage',component:MinePage},
   {name:'SettingPage',component:SettingPage},
-  {name:'EditPage',component:EditPage}
+  {name:'EditPage',component:EditPage},
+  {name:'DetailPage',component:DetailPage}
 ];
 
 //返回按钮
