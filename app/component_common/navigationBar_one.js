@@ -12,8 +12,8 @@ import styles from '../styles/navigationBar';
 import CusSwitch from './customSwitch';
 
 //精选，关注
-import jingxuan from './jingxuan';
-import guanzhu from './guanzhu';
+import jingxuan from './index_content/jingxuan';
+import guanzhu from './index_content/guanzhu';
 
 //我的页面
 import MinePage from '../pages/innerPages/mine';

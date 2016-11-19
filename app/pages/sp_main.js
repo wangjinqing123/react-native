@@ -8,7 +8,7 @@ import {
 
 
 import styles from '../styles/main';
-import jingxuan from '../component_common/jingxuan';
+import jingxuan from '../component_common/index_content/jingxuan';
 
 import NavigationBarRouteMapper from '../component_common/navigationBar_one';
 
