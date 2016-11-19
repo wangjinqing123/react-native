@@ -1,8 +1,8 @@
-var xinxian = require('./xinxian');
+var pinglunList = require('./pinglunList');
 var indexList = require('./indexList');
 module.exports = function() {
     return {
-      "xinxian": xinxian,
+      "pinglunList": pinglunList,
       "indexList":indexList
     }
 }

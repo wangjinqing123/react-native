@@ -1,5 +1,5 @@
 const URL ={
-  "xinxianURL":"http://localhost:3000/xinxian",
+  "pinglunList":"http://localhost:3000/pinglunList",
   "indexListURL":"http://localhost:3000/indexList"
 }
 export default URL;
