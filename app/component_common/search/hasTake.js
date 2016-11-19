@@ -18,13 +18,13 @@ class take extends React.Component {
   render() {
     return (
         <View style={{backgroundColor:'#fff',}}>
-            <View style={styles.hasTake_box}>
-                <View style={styles.hasTake_img_box}>
-                    <Image style={styles.hasTake_img} source={{uri:this.props.information.take_img}}/>
-                </View>
-                <View style={styles.hasTake_info_box}>
-                    <Text style={styles.hasTake_text_title}>{this.props.information.take_name}</Text>
-                    <Text style={styles.hasTake_text_describe}>{this.props.information.take_describe}</Text>
+          <View style={styles.hasTake_box}>
+            <View style={styles.hasTake_img_box}>
+              <Image style={styles.hasTake_img} source={{uri:this.props.information.take_img}}/>
+            </View>
+            <View style={styles.hasTake_info_box}>
+              <Text style={styles.hasTake_text_title}>{this.props.information.take_name}</Text>
+              <Text style={styles.hasTake_text_describe}>{this.props.information.take_describe}</Text>
                 </View>
                 <View style={styles.hasTake_new}>
                    <Text style={styles.hasTake_new_text}>今日更新 <Text style={styles.take_new_num}>{this.props.information.take_new}</Text></Text>
