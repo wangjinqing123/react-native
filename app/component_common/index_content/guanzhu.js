@@ -8,7 +8,9 @@ import {
 } from 'react-native';
 
 
+
 export default class NewsList extends Component{
+  
   render(){
     return (
       <ScrollView>
