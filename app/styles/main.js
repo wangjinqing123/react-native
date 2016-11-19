@@ -89,7 +89,7 @@ export default StyleSheet.create({
   },
   tabBarDark: {
     fontSize: 10,
-    color:'#bfbfbf',
+    color:'#a9a9a9',
     position:'relative',
     top:-3,
   },

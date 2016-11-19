@@ -80,14 +80,19 @@ export default class Index extends Component {
         <View key={index} style={styles.tabBarItem}>
           <TouchableHighlight
             style={{flex:1}}
-            underlayColor = "rgba(244,244,244,1.0)"
+            underlayColor = "#fff"
             onPress={(route) => {
 
               this.nav.replace(routes[index]);
 
             }} key={index}>
             <View style={styles.tabBarThumb}>
-              <Image style={{width:26,height:26,marginBottom:2}}
+              <Image style={{
+                width:26,
+                height:26,
+                marginBottom:2,
+                tintColor:this.state.tabIndex === index ? "#886565" : "#a9a9a9"
+              }}
                 source={
                   tabBars[index][this.state.tabIndex === index ? "imgSrcLight":"imgSrcDark"]
                 }

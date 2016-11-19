@@ -12,7 +12,7 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-import Comment from './Comment';
+import Comment from './comment';
 
 class info extends React.Component {
 
