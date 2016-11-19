@@ -6,8 +6,9 @@ import ReactDOM from 'react-dom';
 
 //.DS_Store
 import MyButton from './MyButton.jsx';
-import ButtonActions from '../actions/ButtonActions.js';
-import ListStore from '../stores/ListStore.js';
+//
+import ButtonActions from '../actions/Action.js';
+import ListStore from '../stores/Store.js';
 
 export default React.createClass({
   //初始化

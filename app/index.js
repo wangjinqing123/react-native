@@ -48,6 +48,7 @@ let tabBars = [
 export default class Index extends Component {
   constructor(props) {
     super(props);
+
     //tab切换状态标记
     this.state = {
       tabIndex: 0
@@ -132,6 +133,7 @@ export default class Index extends Component {
               </View>
             </View>
           }
+
         />
       </View>
     )

@@ -5,6 +5,7 @@ import {
   Image,
   StyleSheet,
   ScrollView,
+<<<<<<< HEAD
   ActivityIndicator,
   ListView
 } from 'react-native';
@@ -12,6 +13,14 @@ import {
 import ListItem from '../info';
 
 import URL from '../../common/url';
+=======
+  TouchableHighlight
+} from 'react-native';
+
+import ListItem from '../info';
+import information from '../../common/test';
+import DetailPage from '../../pages/innerPages/Detail';
+>>>>>>> 9f205951a998be88ff7179857d40a0a76e08c8bb
 
 export default class JokerList extends Component{
   constructor(props){
@@ -37,9 +46,24 @@ export default class JokerList extends Component{
       })
       .done();
   }
+<<<<<<< HEAD
 
   renderIndexList(item){
     console.log(item);
+=======
+  GotoDetail(){
+    <Route text={icons.user} page={pages[0]} navigator={navigator}></Route>
+  }
+  render(){
+    var infoList = information.map((item, index) => {
+        return (
+//  {name:'DetailPage',component:DetailPage}
+            <View key={index}>
+              <ListItem  click={this.Click.bind(this)} isclick={this.state.click} information={item}/>
+            </View>
+        )
+    })
+>>>>>>> 9f205951a998be88ff7179857d40a0a76e08c8bb
     return (
         <View>
           <ListItem information={item}/>

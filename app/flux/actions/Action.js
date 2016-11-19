@@ -1,4 +1,13 @@
 import AppDispatcher from '../dispatchers/AppDispacher.js';
+
+export default {
+  test(text){
+    AppDispatcher.dispatch({
+      actionType:'ROUTE',
+      text:text
+    })
+  }
+}
 //
 // export default {
   // addNewItem(text){

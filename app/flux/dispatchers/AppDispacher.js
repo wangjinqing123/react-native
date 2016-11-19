@@ -1,8 +1,18 @@
 import { Dispatcher } from 'flux';
 import Store from '../stores/Store.js';
-//
-// let AppDispatcher = new Dispatcher();
-//
+
+let AppDispatcher = new Dispatcher();
+
+AppDispatcher.register((action)=>{
+  switch (action.actionType) {
+    case ROUTE:
+      
+      break;
+    default:
+
+  }
+})
+
 // AppDispatcher.register( action =>{
 //   switch (action.actionType) {
 //     //添加item

@@ -1,5 +1,12 @@
 import { EventEmitter } from 'events';
 
+export default Object.assign({},EventEmitter.prototype , {
+  text:'787978',
+  get(){
+    return this.text
+  }
+})
+
 //es6 对象的merge
 // export default Object.assign({},EventEmitter.prototype , {
   // items:['abc'],
