@@ -17,6 +17,7 @@ import {
 import Info from '../../component_common/info';
 import information from '../../common/test';
 
+import DetailComment from '../../component_common/DetailComment';
 import MyButton from '../../component_common/Buttons/MyButton';
 
 export default class Detail extends Component {
@@ -49,7 +50,7 @@ export default class Detail extends Component {
                     }}>
                         <MyButton >关注</MyButton>
                     </View>
-                    
+
                 </View>
 
             </ScrollView>
