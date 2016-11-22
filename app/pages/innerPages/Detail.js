@@ -46,8 +46,6 @@ export default class Detail extends Component {
     }
     //cell
     renderPinglunList(item){
-      console.log(item);
-      console.log(item.name);
       return (
         <View>
           <Text style={{color:'#000'}}>{item.name}</Text>
@@ -59,6 +57,7 @@ export default class Detail extends Component {
       )
     }
     render() {
+
       if(!this.state.isLoading){
         return (
           <View style={{
@@ -95,16 +94,6 @@ export default class Detail extends Component {
 
             <ScrollView>
               <View style={styles.container}>
-                {/* <View >
-                  <Info information={Infomation}/>
-                  <View style={{
-                  position: 'absolute',
-                  left: Dimensions.get('window').width - 80,
-                  top: 30
-                  }}>
-                  <MyButton >关注</MyButton>
-                  </View>
-                </View> */}
 
                 <ListView
                   dataSource={this.state.pinglunList}

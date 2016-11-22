@@ -1,34 +1,26 @@
-import { EventEmitter } from 'events';
+var eve = require('EventEmitter');
+var EventEmitter = new eve();
+var assign = require('object-assign');
 
-export default Object.assign({},EventEmitter.prototype , {
-  text:'787978',
-  get(){
-    return this.text
+export default assign({},EventEmitter.prototype , {
+  rootRoute:{},
+  getRoute(){
+    console.log(this.rootRoute);
+    return this.rootRoute;
+  },
+  setRoute(route){
+    this.rootRoute = route;
+
+  },
+  emitChange(){
+    // EventEmitter 提供的
+    EventEmitter.emit('change');
+  },
+  addChangeListener(callback){
+      // EventEmitter 提供的
+    EventEmitter.addListener('change',callback);
+  },
+  removeChangeListener(callback){
+    this.removeListener('change',callback);
   }
 })
-
-//es6 对象的merge
-// export default Object.assign({},EventEmitter.prototype , {
-  // items:['abc'],
-  // getAll(){
-  //   return this.items;
-  // },
-  // addNewItemHandle(text){
-  //   this.items.push(text);
-  // },
-  // removeItemHandle(index){
-  //   // this.items.slice(index,1);//返回新的数组，本身的数组不变
-  //   this.items.splice(index,1); //更改本身的数组
-  // },
-  // emitChange(){
-  //   // EventEmitter 提供的
-  //   this.emit('change');
-  // },
-  // addChangeListener(callback){
-  //   // EventEmitter 提供的
-  //   this.on('change',callback);
-  // },
-  // removeChangeListener(callback){
-  //   this.removeListener('change',callback);
-  // }
-// })

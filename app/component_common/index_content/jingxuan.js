@@ -6,12 +6,25 @@ import {
   StyleSheet,
   ScrollView,
   ActivityIndicator,
-  ListView
+  ListView,
+  TouchableHighlight
 } from 'react-native';
 
 import ListItem from '../info';
 
 import URL from '../../common/url';
+//flux
+import Action from '../../flux/actions/Action';
+
+//详情页面
+import Detail from "../../pages/innerPages/Detail";
+import Reba from '../reba';
+//
+const routes = [
+  {name:"Detail" , component:Detail},
+  {name:"Reba",component:Reba}
+
+];
 
 
 export default class JokerList extends Component{
@@ -25,6 +38,7 @@ export default class JokerList extends Component{
       indexList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     }
   }
+
   fetchData(){
     fetch(URL.indexListURL)
       .then(response => response.json())
@@ -38,13 +52,22 @@ export default class JokerList extends Component{
       })
       .done();
   }
-
   renderIndexList(item){
-    console.log(item);
+    // var ids = {
+    //   user_id : item.user_id,
+    //   saysay_id : item.saysay_id
+    // }
     return (
-        <View>
-          <ListItem information={item}/>
-        </View>
+        <TouchableHighlight
+          underlayColor="#fff"
+          onPress={()=>{
+            Action.setNavigator(routes[0]);
+          }}
+        >
+          <View>
+            <ListItem information={item}/>
+          </View>
+        </TouchableHighlight>
     )
   }
   render(){

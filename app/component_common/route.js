@@ -7,13 +7,18 @@ import {
   Image
 } from 'react-native';
 
+import Action from '../flux/actions/Action';
 
 export default class Route extends Component{
   render(){
     return (
       <TouchableOpacity
         underlayColor='#bfbfbf'
-        onPress={() => this.props.navigator.push(this.props.page)
+        onPress={
+          () => this.props.navigator.push(this.props.page)
+          // ()=>{
+          //   Action.setNavigator(this.props.page);
+          // }
         }>
         <Image style={styles.route} source={{uri:this.props.text}}/>
       </TouchableOpacity>

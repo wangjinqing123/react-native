@@ -24,7 +24,7 @@ let messageT = [
 class CustomButton extends React.Component {
   constructor(props){
     super(props);
-    
+
   }
 
   render() {
@@ -107,10 +107,7 @@ export default class NewsList extends Component{
               data ={messageT[2]}
               onPress={this.btnPress}
             />
-            <CustomButton
-              data ={messageT[1]}
-              onPress={this.btnPress}
-            />
+
           </View>
         </View>
       </ScrollView>

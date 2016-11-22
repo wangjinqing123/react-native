@@ -38,7 +38,11 @@ class info extends React.Component {
 
     return (
 
-        <View style={styles.info}>
+        <View
+          style={styles.info}
+          ref="user_id"
+          user_id={this.props.information.user_id}
+        >
           <View style={styles.user}>
             <Image source={{uri:this.props.information.user_icon}} style={styles.user_img}/>
             <Text style={styles.user_name}>{this.props.information.user_name}</Text>
