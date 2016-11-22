@@ -32,9 +32,6 @@ class info extends React.Component {
     }else {
       var havaImg = flase;
     }
-    var commentList = this.props.information.Comment.map( (item , index)=>{
-      return <Comment key={index} Comment={item}/>
-    });
 
     return (
 
@@ -146,7 +143,6 @@ class info extends React.Component {
               </TouchableHighlight>
             </View>
           </View>
-          {commentList}
         </View>
 
     )
@@ -202,7 +198,7 @@ const styles = StyleSheet.create({
 
     },
     info_show_box:{
-        marginTop:10,
+        marginTop:20,
     },
     info_other_box:{
         marginTop:20,

@@ -29,7 +29,6 @@ export default class JokerList extends Component{
     fetch(URL.indexListURL)
       .then(response => response.json())
       .then(responseData => {
-
         this.setState({
           indexList:this.state.indexList.cloneWithRows(responseData),
           isLoading:true
@@ -40,7 +39,7 @@ export default class JokerList extends Component{
   }
 
   renderIndexList(item){
-    console.log(item);
+
     return (
         <View>
           <ListItem information={item}/>
@@ -48,6 +47,7 @@ export default class JokerList extends Component{
     )
   }
   render(){
+
     if(!this.state.isLoading){
       return (
         <View style={{
@@ -67,6 +67,7 @@ export default class JokerList extends Component{
         </View>
       )
     }else{
+
       return (
         <View style={styles.container}>
           <ScrollView>
