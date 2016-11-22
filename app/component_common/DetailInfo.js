@@ -32,17 +32,10 @@ class info extends React.Component {
     }else {
       var havaImg = flase;
     }
-    var commentList = this.props.information.Comment.map( (item , index)=>{
-      return <Comment key={index} Comment={item}/>
-    });
 
     return (
 
-        <View
-          style={styles.info}
-          ref="user_id"
-          user_id={this.props.information.user_id}
-        >
+        <View style={styles.info}>
           <View style={styles.user}>
             <Image source={{uri:this.props.information.user_icon}} style={styles.user_img}/>
             <Text style={styles.user_name}>{this.props.information.user_name}</Text>
@@ -150,7 +143,6 @@ class info extends React.Component {
               </TouchableHighlight>
             </View>
           </View>
-          {commentList}
         </View>
 
     )
@@ -206,7 +198,7 @@ const styles = StyleSheet.create({
 
     },
     info_show_box:{
-        marginTop:10,
+        marginTop:20,
     },
     info_other_box:{
         marginTop:20,
