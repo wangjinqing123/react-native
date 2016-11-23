@@ -23,7 +23,7 @@ export default class NewsList extends Component{
           take_describe:'斐波那契养兔子O(∩_∩)O哈哈~',
           take_new:71,
       }
-      const hasTake_list=[information1,information2,];
+      const hasTake_list=[information1,information2];
       const hasTakeItemList=hasTake_list.map(function(item,index){
           return <Hastake key={index} information={item}/>
       })
