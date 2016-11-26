@@ -114,6 +114,15 @@ var NavigationBar = {
         </View>
       )
     }
+    if(route.name=="EditPage"){
+      return (
+        <View style={styles.bugfixed}>
+          <View style={styles.title}>
+            <Text>投稿</Text>
+          </View>
+        </View>
+      )
+    }
     if(route.name=="SettingPage"){
       return (
         <View style={styles.bugfixed}>

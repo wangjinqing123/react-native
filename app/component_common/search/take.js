@@ -11,14 +11,23 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import rebaDetail from '../reba_detail'
+const route={name:"rebaDetail",component:rebaDetail}
+
 class take extends React.Component {
   subscribe(){
       return 0
   }
   render() {
     return (
-        <View style={{backgroundColor:'#fff',}}>
+        <TouchableHighlight
+          underlayColor = "#fff"
+          onPress={() => {
+            // this.props.navigator.push(route);
+            console.log(this.props.navigator);
+          }}>
 
+        <View style={{backgroundColor:'#fff',}}>
             <View style={styles.take_box}>
                 <View style={styles.take_img_box}>
                     <Image style={styles.take_img} source={{uri:this.props.information.take_img}}/>
@@ -42,8 +51,8 @@ class take extends React.Component {
                     </TouchableHighlight>
                 </View>
             </View>
-
       </View>
+      </TouchableHighlight>
     )
   }
 }
