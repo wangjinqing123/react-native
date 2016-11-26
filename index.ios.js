@@ -60,7 +60,6 @@ export default class app extends Component {
 
   }
   renderScene(route , navigator){
-
     nav = navigator;
     if(route.name == 'Index'){
       return <Home navigator={navigator}/>;
@@ -68,7 +67,6 @@ export default class app extends Component {
     if(route.name == 'Detail'){
       return <Detail navigator={navigator}/>;
     }
-
   }
   render(){
     return (

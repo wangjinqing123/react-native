@@ -42,7 +42,7 @@ export default class JokerList extends Component{
   }
   //踩
   cai(){
-    
+
   }
   //赞
   zan(){
@@ -56,7 +56,7 @@ export default class JokerList extends Component{
           content:responseData[0],
           isLoading:true
         });
-        console.log(responseData[0]);
+        // console.log(responseData[0]);
       })
       .done();
   }

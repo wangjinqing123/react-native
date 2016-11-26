@@ -44,6 +44,7 @@ let tabBars = [
     "imgSrcDark":require('./images/icons/write.png')
   }
 ];
+let allRoutes = [];
 
 export default class Index extends Component {
   constructor(props) {
@@ -58,6 +59,7 @@ export default class Index extends Component {
    * 切换场景
    */
   renderScene(route, navigator) {
+
     return <route.component navigator={navigator}  {...route.passProps} />;
   }
   //配置转场类型
@@ -82,11 +84,11 @@ export default class Index extends Component {
           <TouchableHighlight
             style={{flex:1}}
             underlayColor = "#fff"
-            onPress={(route) => {
-
+            onPress={() => {
               this.nav.replace(routes[index]);
+              // this.nav.jumpTo(routes[index]);
 
-            }} key={index}>
+            }}>
             <View style={styles.tabBarThumb}>
               <Image style={{
                 width:26,
@@ -125,6 +127,7 @@ export default class Index extends Component {
                 tabIndex: routes.indexOf(nextRoute)
               })
             }
+
           }}
           navigationBar = {
             <View style={styles.tabBar}>

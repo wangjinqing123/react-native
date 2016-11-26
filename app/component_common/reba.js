@@ -66,32 +66,32 @@ export default class JokerList extends Component{
   }else {
     return (
         <View style={styles.container}>
-         <ScrollView style={{flex:1}}>
-           <View style={styles.swiper_box}>
-               <Swiper style={styles.wrapper} showsPagination={false}>
-                   <View style={styles.slide1}>
-                       <View style={styles.image_box}>
-                           <Image style={styles.image} source={{uri:img1}}/>
-                           <Text style={styles.image_text}>天蝎宝宝嗨起来~</Text>
-                       </View>
-                   </View>
+          <ScrollView style={{flex:1}}>
+            <View style={styles.swiper_box}>
+              <Swiper style={styles.wrapper} showsPagination={false}>
+                <View style={styles.slide1}>
+                  <View style={styles.image_box}>
+                    <Image style={styles.image} source={{uri:img1}}/>
+                    <Text style={styles.image_text}>天蝎宝宝嗨起来~</Text>
+                  </View>
+                </View>
 
-                   <View style={styles.slide2}>
-                       <View style={styles.image_box}>
-                           <Image style={styles.image} source={{uri:img2}}/>
-                           <Text style={styles.image_text}>二次元情感故事,暖暖的治愈,暖暖的爱~</Text>
-                       </View>
-                   </View>
+                <View style={styles.slide2}>
+                  <View style={styles.image_box}>
+                    <Image style={styles.image} source={{uri:img2}}/>
+                    <Text style={styles.image_text}>二次元情感故事,暖暖的治愈,暖暖的爱~</Text>
+                  </View>
+                </View>
 
-               </Swiper>
+              </Swiper>
 
-           </View>
+            </View>
 
-           <ListView
-             dataSource={this.state.rebaList}
-             renderRow={this.renderRebaList}
-           >
-           </ListView>
+            <ListView
+              dataSource={this.state.rebaList}
+              renderRow={this.renderRebaList}
+            >
+            </ListView>
          </ScrollView>
         </View>
     );

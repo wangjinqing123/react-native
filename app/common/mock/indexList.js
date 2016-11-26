@@ -14,7 +14,7 @@ module.exports = [
         user_get_hot: 333,
         user_get_zf: 444,
         user_icon: 'http://p3.pstatp.com/thumb/ef40011ec27fbc9d1a7',
-
+        contentimg:'http://p3.pstatp.com/thumb/4497/1706222580',
         Comment: [
             {
                 username: "子龙",

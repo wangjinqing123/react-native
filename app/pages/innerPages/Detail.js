@@ -151,11 +151,13 @@ export default class Detail extends Component {
 
                 <View >
                   <Info information={this.state.Infomation}/>
-                  <View style={{
+                  <View style={[{
                     position: 'absolute',
                     left: Dimensions.get('window').width - 80,
                     top: 30
-                  }}>
+                  },
+                    Platform.OS == 'ios' ? styles.topios : null
+                  ]}>
                     <MyButton >关注</MyButton>
                   </View>
                 </View>
@@ -178,6 +180,9 @@ export default class Detail extends Component {
 };
 
 const styles = StyleSheet.create({
+    topios:{
+      top:10,
+    },
     container: {
       flex:1,
       backgroundColor: '#efefef'

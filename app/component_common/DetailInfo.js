@@ -26,7 +26,7 @@ class info extends React.Component {
     console.log("转发");
   }
   render() {
-    console.log(this.props.information);
+    // console.log(this.props.information);
     if(this.props.information.contentimg!="undefined"){
       var havaImg = true;
     }else {
