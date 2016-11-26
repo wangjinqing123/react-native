@@ -42,7 +42,7 @@ export default class Two extends Component{
           style={{flex:1}}
           initialRoute={route}
           configureScene={this.configureScene}
-          renderScene={this.renderScene}
+          renderScene={(route, navigator) => this.renderScene(route, navigator)}
 
           navigationBar={
             <Navigator.NavigationBar

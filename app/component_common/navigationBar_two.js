@@ -109,6 +109,15 @@ var NavigationBar = {
         </View>
       )
     }
+    if(route.name=="Position"){
+        return (
+        <View style={styles.bugfixed}>
+          <View style={styles.title}>
+            <Text>附近段友</Text>
+          </View>
+        </View>
+      )
+    }
   }
 };
 
